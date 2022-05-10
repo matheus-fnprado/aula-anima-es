@@ -42,6 +42,23 @@ header nav a {
     justify-content: center;
     align-items: center;
     width: 100%;
+    height: 100px;
+}
+
+@keyframes rodar {
+    0%{
+        background-color: black;
+        border-radius: 50%;
+        width: 80px;
+        height: 80px;
+    }
+    100%{
+        background-color: red;
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+    }
+    
 }
 
 .animada {
@@ -49,6 +66,8 @@ header nav a {
     width: 100px;
     height: 100px;
     background-color: black;
+
+    animation: rodar 1500ms infinite alternate;
 }
 
 section {
@@ -77,6 +96,11 @@ form input {
     border-radius: 7px;
 }
 
+form input:hover{
+    border: solid 3px greenyellow;
+    transition: all 500ms;
+}
+
 form textarea {
     width: 100%;
     border-radius: 7px;
@@ -92,4 +116,15 @@ form button {
     background-color: rgb(228, 227, 227);
     font-weight: bold;
     text-transform: uppercase;
+}
+
+form button:hover{
+    font-size: 20px;
+
+    background: lightskyblue;
+
+    font-weight: bold;
+    color: #000;
+
+    transition: all 1000ms
 }
